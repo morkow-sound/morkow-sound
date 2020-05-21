@@ -1,0 +1,61 @@
+.sp_ul_menu
+{
+    width: 100%; /* Ширина меню */
+    list-style: none; /* Для списка убираем маркеры */
+    margin: 0; /* Нет отступов вокруг */
+    padding: 0; /* Убираем поля вокруг текста */
+    font-family: Arial, sans-serif; /* Рубленый шрифт для текста меню */
+    font-size: 10pt; /* Размер названий в пункте меню */ 
+	
+}
+
+.sp_ul_menu li
+{
+	padding: 0px 0px 0px 0px;
+	margin: 0px auto;
+}
+
+
+.sp_ul_menu div
+{
+	position: absolute; /* Подменю позиционируются абсолютно */
+    /*display: none;      /* Скрываем подменю */
+	visibility: hidden;   /* Скрываем подменю 2*/
+	transform: scaleY(0);  /* Скрываем подменю 3*/
+	transform: scaleX(0);  /* Скрываем подменю 3*/
+	/* margin-left: -58px; /* Сдвигаем подменю влево */
+	text-align: center;
+	top: 110%; /*** top: -310%;  ***/ 
+	opacity: 0; /*** прозрачность - максимальная при 0 и полностью не прозрасная при 1 ***/
+	transition-duration: 0.8s;	/*** скорость анимации ***/
+}
+
+.sp_li_menu a
+{
+    display: block; /* Ссылка как блочный элемент */
+    padding: 7px; /* Поля вокруг надписи */
+    text-decoration: none; /* Подчеркивание у ссылок убираем */
+    color: #666; /* Цвет текста */
+    border: 1px solid #ccc;/* Рамка вокруг пунктов меню */
+    background-color: #f0f0f0; /* Цвет фона */
+	font-size: 14px;
+    border-bottom: none; /* Границу снизу не проводим */
+}
+
+   .sp_li_menu a:hover 
+   {
+		color: #ffe; /* Цвет текста активного пункта */
+		background-color: #5488af; /* Цвет фона активного пункта */
+		transition-duration: 0.8s;
+	}
+		.sp_li_level_menu:hover div 
+		{ 
+				/*display: block; /* При выделении пункта курсором мыши отображается подменю */
+				margin: 0px auto;
+				/* top: 110%; */
+				opacity: 0.95;
+				visibility: visible;
+				transform: scaleY(1);
+				transform: scaleX(1);
+		}
+		

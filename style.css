@@ -1,0 +1,351 @@
+body
+{
+	background-image: url(images/background.jpg);
+	background-size: cover;
+	background-position: center top;
+	text-align: center;
+	color: #cfdbdc;
+}
+
+.container_body /*** все содержимое на странице помещённое в div ***/
+{
+	width:100%;
+	margin: 0px auto;
+}
+
+.indentation   /*** отступ между div внутри одного container ***/
+{
+	margin: 20px; 
+}
+
+/************************************************** свойства для flex - 2 **************************************************/
+
+
+.wrapper 
+{
+	height:100%;
+	overflow: hidden;
+	min-height:100%;
+	padding:5px;
+}
+
+.block__body 
+{
+	
+}
+
+	.block__row__body /*** свойства для контейнера flex ***/
+	{
+		display: inline-flex; /*** inline-flex - перестаёт занимать всю область контейнер, подгоняется под элементы, flex без подгонки по размеру ***/
+		justify-content: space-around; /*** start - лево и end - право center - центр space-between - разносит в лево+центр+право на равные расстояния, space-around делает равномерные расстояния от элементов между друг другом и границами body ***/
+		align-items: center; /*** flex-start - выставляет высоту и размеры согласно каждому блоку и прижмёт к top flex-end - выставляет высоту и размеры согласно каждому блоку и прижмёт к bottom , center - делает по центру горизонта отностельно самого большого , baseline - выстраивает по базовой лини , stretch - по умолчанию - расстягивает ***/
+		flex-wrap: nowrap; /*** nowrap - элементы при сжатии не переносятся, wrap-reverse заставляет переносится в обратном порядке  ***/
+		flex-direction: column; /*** устанавливается основная ось по которой выстраиваются все основные элементы, значение по умолчанию row - элементы выстраиваются по горизонтали в ряд, row-reverse - разворачивает, column - выстраивает по вертикали все элементы делая их как список ***/
+		width:100%;
+		max-width: 1880px;
+		border: 2px solid #f1ea89;
+		margin: 10px 0px 10px 0px; 
+	}
+
+	.block__column__body  /*** свойства для элемента flex ***/
+	{
+		border: 2px solid #8d62dd;
+		flex-basis: auto; /*** управляет размером flex элемента , по умолчанию параметр auto , не являеется аналогом значения width можно задать проценты 33% или 10px ***/
+		flex-grow: 1; /*** увеличение отностельно basis значения элемента, по умолчанию 0 - значит не меняет свой размер ***/
+		flex-shrink: 1; /*** уменьшение отностельно basis значения элемента, по умолчанию 1 - значит разрешено менять свой размер ***/
+	}
+	
+		.block__column__body_1 /*** ещё один класс - мдификатор основного ***/
+		{
+			/***align-self: flex-top; /*** переназначаем значение align унаследованного ранее элемента ***/
+			order:1; /*** задаём порядковый номер элементу флекс ***/
+			width: 33.333%;
+		}
+		.block__column__body_2 
+		{
+			order:2;
+			width: 33.333%;
+		}
+		.block__column__body_3 
+		{
+			/*** align-self:flex-end; ***/
+			order:3;
+			width: 33.333%;
+		}
+	
+	.block__item__body /*** свойства для контета вложенного в элементы flex ***/
+	{
+		background-color: #6cd2d2;
+		padding: 10px;
+		font-size: 20px;
+		color: #fff;
+		font-weight: 700; /*** Устанавливает насыщенность шрифта. Значение устанавливается от 100 до 900 с шагом 100. Сверхсветлое начертание, которое может отобразить браузер, имеет значение 100, а сверхжирное — 900. Нормальное начертание шрифта (которое установлено по умолчанию) эквивалентно 400, стандартный полужирный текст — значению 700. ***/
+	}
+
+			@media (max-width:665px) 
+			{
+				.block__row__body 
+				{
+					display: inline-flex;
+					align-items: center;
+					flex-direction: column;
+				}
+				.block__column__body_1 
+				{
+					width: 100%;
+				}
+				.block__column__body_2 
+				{
+					width: 100%;
+				}
+				.block__column__body_3 
+				{
+					width: 100%;
+				}
+			}
+
+
+
+
+/************************************************** свойства для flex - 1 **************************************************/
+
+
+.wrapper 
+{
+	height:100%;
+	overflow: hidden;
+	min-height:100%;
+	padding:5px;
+}
+
+.block 
+{
+	
+}
+
+	.block__row /*** свойства для контейнера flex ***/
+	{
+		display: inline-flex; /*** inline-flex - перестаёт занимать всю область контейнер, подгоняется под элементы, flex без подгонки по размеру ***/
+		justify-content: space-around; /*** start - лево и end - право center - центр space-between - разносит в лево+центр+право на равные расстояния, space-around делает равномерные расстояния от элементов между друг другом и границами body ***/
+		align-items: stretch; /*** flex-start flex-top; - выставляет высоту и размеры согласно каждому блоку и прижмёт к top flex-end - выставляет высоту и размеры согласно каждому блоку и прижмёт к bottom , center - делает по центру горизонта отностельно самого большого , baseline - выстраивает по базовой лини , stretch - по умолчанию - расстягивает ***/
+		flex-wrap: nowrap; /*** nowrap - элементы при сжатии не переносятся, wrap-reverse заставляет переносится в обратном порядке  ***/
+		flex-direction: row; /*** устанавливается основная ось по которой выстраиваются все основные элементы, значение по умолчанию row - элементы выстраиваются по горизонтали в ряд, row-reverse - разворачивает, column - выстраивает по вертикали все элементы делая их как список ***/
+		width:100%;
+		max-width: 1880px;
+		/* border: 2px solid #f1ea89; */
+		margin: 10px 0px 10px 0px; 
+	}
+
+	.block__column  /*** свойства для элемента flex ***/
+	{
+		/* border: 2px solid #8d62dd; */
+		flex-basis: auto; /*** управляет размером flex элемента , по умолчанию параметр auto , не являеется аналогом значения width можно задать проценты 33% или 10px ***/
+		flex-grow: 1; /*** увеличение отностельно basis значения элемента, по умолчанию 0 - значит не меняет свой размер ***/
+		flex-shrink: 1; /*** уменьшение отностельно basis значения элемента, по умолчанию 1 - значит разрешено менять свой размер ***/
+	}
+	
+		.block__column_1 /*** ещё один класс - мдификатор основного ***/
+		{
+			align-self: center; /*** переназначаем значение align унаследованного ранее элемента ***/
+			order:1; /*** задаём порядковый номер элементу флекс ***/
+			width: 15%;
+		}
+		.block__column_2 
+		{
+			order:2;
+			width: 70%;
+			/* width: 33.333%; */ /*** на 3 равные части ***/
+			/* height: 300px; */
+		}	
+		.block__column_3 
+		{
+			align-self: center;
+			order:3;
+			width: 15%;
+		}
+	
+	.block__item /*** свойства для контета вложенного в элементы flex ***/
+	{
+		/* background-color: #6cd2d2; */
+		padding: 10px;
+		font-size: 20px;
+		color: #fff;
+		font-weight: 700; /*** Устанавливает насыщенность шрифта. Значение устанавливается от 100 до 900 с шагом 100. Сверхсветлое начертание, которое может отобразить браузер, имеет значение 100, а сверхжирное — 900. Нормальное начертание шрифта (которое установлено по умолчанию) эквивалентно 400, стандартный полужирный текст — значению 700. ***/
+	}
+
+			@media (max-width:665px) 
+			{
+				.block__row 
+				{
+					display: inline-flex;
+					align-items: center;
+					flex-direction: column;
+				}
+				.block__column_1 
+				{
+					width: 100%;
+					display: none;
+				}
+				.block__column_2 
+				{
+					width: 100%;
+				}
+				.block__column_3 
+				{
+					width: 100%;
+					display: none;
+				}
+			}
+
+
+
+/*********************************************** адаптация видео youtube__video ****************************/
+
+
+				.youtube__video  
+				{
+					position:relative;
+					padding-bottom:56.25%;
+				}
+				
+					.youtube__video iframe 
+					{
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						height:100%;
+					}
+
+
+
+
+/*********************************************** адаптация видео youtube__video ****************************/
+
+
+
+
+
+
+
+
+/*********************************************** Простая анимация пульсирующей кнопки на чистом CSS ****************************/
+.pulse_img_speaker {
+	flex: 0 0 100%;  /*** размер картинки ***/
+	margin: 2px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	animation: radial-pulse 1s infinite;
+	padding: 10px;
+}
+
+.pulse_img_speaker img {
+	max-width:100%;
+	display: block;
+	/* background-color: #efefef;     /* #c6c6c6; */
+	background: -webkit-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);  /*** Создаёт радиальный градиент в браузерах Safari и Chrome. ***/
+	background: -ms-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);      /*** Создаёт радиальный градиент в браузере Internet Explorer. ***/
+	background: -moz-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);      /*** Создаёт радиальный градиент в браузере Firefox. ***/
+	background: -o-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/
+	border: 2px solid #9392af; /* Параметры границы */
+	border-radius: 100%;
+	padding: 10px;
+	transition:all 0.3s ease 0s;
+	animation: radial-pulse 1s infinite;
+}
+ 
+.wrapper_img_speaker {
+	position: relative;
+	align-items: stretch;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+ 
+ 
+ 
+@keyframes radial-pulse 
+{
+0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+ 
+  100% {
+    box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+  }
+} 
+/*********************************************** Простая анимация пульсирующей кнопки на чистом CSS ****************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#div_top
+{
+	font-size: 30px;
+	margin: auto;	
+	width:25%;
+	border: 5px solid #a0d5de;
+	border-radius:30px;
+	opacity: 0.75;
+	
+}
+
+.HTTP_background
+{
+	background-color:#cdc1ce;
+	color: #000000;
+	word-spacing: 10px;
+	padding:5px 5px;
+	font-size: 70px;
+	
+}
+
+a
+{
+	font-size: 20px;
+	
+}
+
+.HTTP a
+{
+	color: #ffffff;
+	font-size: 25px;
+}
+
+.HTTP a:hover
+{
+	color: #000000;
+}
+
+.HTTP
+{
+	color: #5a0a0a;
+	font-size: 20px;
+  	background-color:#d9b1a4; 		
+	width: 25%;						
+	word-spacing: 5px;
+	padding:5px;
+	margin: auto;
+	border: 5px solid #aeb3b3;
+	border-radius:30px;
+	opacity: 0.75;
+}
+
+
+
+
+

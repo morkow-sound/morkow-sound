@@ -1,0 +1,49 @@
+.sp_ul_menu
+{
+    width: 100%; /* Ширина меню */
+    list-style: none; /* Для списка убираем маркеры */
+    margin: 0; /* Нет отступов вокруг */
+    padding: 0; /* Убираем поля вокруг текста */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Рубленый шрифт для текста меню */
+	margin: 0;
+}
+
+.sp_ul_menu li
+{
+	padding: 0px 0px 0px 0px;
+}
+
+.sp_ul_menu div
+{
+	position: relative; /* Подменю позиционируются */
+    /*display: none;       Скрываем подменю */
+	margin: 0 auto;
+	padding: 16px 0px 0px 0px;
+}
+
+.sp_li_menu a
+{
+    display: block; /* Ссылка как блочный элемент */
+    padding: 0px; /* Поля вокруг надписи */
+    text-decoration: none; /* Подчеркивание у ссылок убираем */
+    color: #666; /* Цвет текста */
+	font-size: 14px; /* Размер названий в пункте меню */
+    /*border: 0px solid #ccc;  Рамка вокруг пунктов меню */
+    /*background-color: #f0f0f0;  Цвет фона */
+    /*border-bottom: none;  Границу снизу не проводим */
+	margin: 0;
+	transition-duration: 0.8s;
+}
+
+   .sp_li_menu a:hover {
+    color: #ffe; /* Цвет текста активного пункта */
+	text-decoration: underline;		
+	transition-duration: 0.8s;
+	font-size: 16px;
+}
+   .brd {
+    border-bottom: 1px solid #ccc; /* Линия снизу */
+}
+   .brd_top {
+    border-top: 1px solid #ccc; /* Линия снизу */
+}
