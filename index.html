@@ -272,15 +272,6 @@
 </div>
 
 
-  		<div class="HTTP_background" id="div_top">
-		ссылки на поисковые системы<br>
-		</div>
-			</br>
-				<div class="HTTP"> 
-					<a href="https://yandex.ru/" >яндекс</a>
-					<a href="https://www.google.com/" >google</a>
-				</div>
-			</br>
 	<div>
 		<nav>
 			<a href= "https://yandex.ru/" >яндекс</a> <a href= "https://www.google.com/" >google</a> 
@@ -289,26 +280,7 @@
 </div>
 				<div>
 					<?php 
-							function parseWord($userDoc) 
-						{
-							$fileHandle = fopen($userDoc, "r");
-							$line = @fread($fileHandle, filesize($userDoc));   
-							$lines = explode(chr(0x0D),$line);
-							$outtext = "";
-							foreach($lines as $thisline)
-							{
-								$pos = strpos($thisline, chr(0x00));
-								if (($pos !== FALSE)||(strlen($thisline)==0))
-								{
-								} else {
-									$outtext .= $thisline." ";
-								}
-							}
-							$outtext = preg_replace("/[^a-zA-Z0-9\s\,\.\-\n\r\t@\/\_\(\)]/","",$outtext);
-							return $outtext;
-						} 
-						
-						$userDoc = "сайт на html.doc";
+
 					?>
 				</div>
  </div>

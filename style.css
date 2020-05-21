@@ -279,73 +279,8 @@ body
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#div_top
-{
-	font-size: 30px;
-	margin: auto;	
-	width:25%;
-	border: 5px solid #a0d5de;
-	border-radius:30px;
-	opacity: 0.75;
-	
-}
-
-.HTTP_background
-{
-	background-color:#cdc1ce;
-	color: #000000;
-	word-spacing: 10px;
-	padding:5px 5px;
-	font-size: 70px;
-	
-}
-
 a
 {
 	font-size: 20px;
 	
 }
-
-.HTTP a
-{
-	color: #ffffff;
-	font-size: 25px;
-}
-
-.HTTP a:hover
-{
-	color: #000000;
-}
-
-.HTTP
-{
-	color: #5a0a0a;
-	font-size: 20px;
-  	background-color:#d9b1a4; 		
-	width: 25%;						
-	word-spacing: 5px;
-	padding:5px;
-	margin: auto;
-	border: 5px solid #aeb3b3;
-	border-radius:30px;
-	opacity: 0.75;
-}
-
-
-
-
-
