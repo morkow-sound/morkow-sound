@@ -1,0 +1,307 @@
+/*Обнуление*/
+*,*:before,*:after
+{
+	padding:0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+.menu_css
+{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.wrapper
+{
+
+}
+
+/*Основные стили*/
+
+.container
+{
+	max-width: 1880px;
+	margin: 0px auto;
+	padding: 0px 10px;
+}
+
+.header
+{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+
+.header:before
+{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #5b5979;
+	z-index: 2;
+}
+
+.header_body
+{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 90 px;
+	align-items: center;
+}
+
+.header_logo
+{
+	flex: 0 0 46px;  /*** размер картинки ***/
+	margin: 2px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+}
+
+.header_logo img
+{
+	max-width:100%;
+	display: block;
+	/* background-color: #efefef;     /* #c6c6c6; */
+	background: -webkit-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);  /*** Создаёт радиальный градиент в браузерах Safari и Chrome. ***/
+	background: -ms-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);      /*** Создаёт радиальный градиент в браузере Internet Explorer. ***/
+	background: -moz-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);      /*** Создаёт радиальный градиент в браузере Firefox. ***/
+	background: -o-radial-gradient(center, circle farthest-side, #c6c6c6, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/
+	border: 2px solid #9392af; /* Параметры границы */
+	border-radius: 100%;
+	padding: 0px;
+	transition:all 0.3s ease 0s;
+}
+
+.header_logo :hover 
+{
+	/* background-color: #99ffff; */
+	border: 2px solid #ccccd9; /* Параметры границы */
+	border-radius: 100%;
+	padding: 0px;
+	background: -webkit-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);  /*** Создаёт радиальный градиент в браузерах Safari и Chrome. ***/
+	background: -ms-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Internet Explorer. ***/
+	background: -moz-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Firefox. ***/
+	background: -o-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/	
+	transition:all 0.3s ease 0s;
+}
+
+.header_burger{display: none;} /* скрываем на всякий случай для всех разрешений которые свыше 767px */
+.header_menu{}
+
+
+.header_list
+{
+	display:flex;
+	position: relative;
+	z-index: 2;
+}
+
+.header_list li
+{
+	/* убираем точки */
+	list-style: none;
+	margin: 0px 0px 0px 0px; /*** отступ слева от элемента списка li ***/
+	padding: 12px 0px 12px 0px; /***** высота ссылки для hover ******/
+}
+
+
+.header_link
+{
+	color:#e3e1f2;
+	text-transform: uppercase;
+	font-size: 12px; /*** размер текста в меню ***/
+	text-decoration: none;
+	padding: 17px 10px 17px 10px; /***** высота ссылки для hover ******/
+	text-decoration: none;
+	background: none;
+	transition-duration: 0.8s;
+}
+
+	.header_link:hover
+	{
+		text-decoration: underline;
+		color: #ffffff;		
+		transition-duration: 0.8s;
+		font-size: 14px;
+		background: -webkit-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);  /*** Создаёт радиальный градиент в браузерах Safari и Chrome. ***/
+		background: -ms-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);      /*** Создаёт радиальный градиент в браузере Internet Explorer. ***/
+		background: -moz-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);      /*** Создаёт радиальный градиент в браузере Firefox. ***/
+		background: -o-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/
+	}
+
+
+/*создаем медиа запрос - 767px размер iPad - всё что меньше будет прятаться в 'бургер'*/
+@media (max-width:767px)
+{
+
+	body.lock
+	{
+		overflow: hidden;
+	}
+	
+	.header_logo
+	{
+		flex: 0 0 40px;
+	}
+	.header_body
+	{
+		height: 50 px;
+	}
+	
+	.header_burger
+	{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+	}
+	.header_burger span
+	{
+		position: absolute;
+		background-color: #fff;
+		left:0;
+		width:100%;
+		height: 2px;
+		top: 9px;
+		transition:all 0.3s ease 0s;
+	}
+	.header_burger:before, /*таким образом через запятую можно прописать общие эллементы стиля сразу для множества псевдоэлементов*/
+	.header_burger:after
+	{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition:all 0.3s ease 0s;
+	}
+	.header_burger:before
+	{
+		top:0;
+	}
+	.header_burger:after
+	{
+		bottom: 0;
+	}
+	
+	.header_burger.active span
+	{
+		transform: scale(0);
+	}
+	
+	.header_burger.active:before
+	{
+		transform:rotate(45deg);
+		top:9px;
+	}
+	.header_burger.active:after
+	{
+		transform:rotate(-45deg);
+		bottom: 9px;
+	}
+	
+	.header_menu
+	{
+		position: fixed;
+		top:-100%;
+		left:0;
+		width:100%;
+		height:100%;
+		overflow: auto;
+		transition:all 0.5s ease 0s;
+		background-color:#59c1c4;
+		padding: 70px 10px 20px 10px;
+		
+	}
+	
+	.header_menu.active
+	{
+		top: 0;
+	}
+	
+	.header_list
+	{
+		display: inline-block;
+	}
+	.header_list li
+	{
+		margin: 0px 0px 20px 0px;
+		/*****высота ссылки для hover******/
+		padding: 0px 0px 0px 0px;		
+	}
+	
+	
+	.header_link
+	{
+		/*****высота ссылки для hover******/
+		padding: 0px 0px 0px 0px;
+		font-size: 18px; /*** размер текста в меню ***/
+	}
+
+		.header_link:hover
+	{
+		font-size: 20px;
+		background: none; /* -webkit-radial-gradient(center, circle farthest-side, #bae6e7, #59c1c4) */
+	}
+
+}
+
+
+
+.content
+{
+	padding: 30px 0px 0px 0px;
+}
+
+.content_text
+{
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.content_text p
+{
+	margin: 0px 0px 25px 0px; /* margin: 0px 0px 20px 0px; отступ снизу от меню до текста*/
+}
+
+@media (max-width:767px)
+{
+	.content 
+	{
+		padding: 25px 0px 0px 0px;
+	}
+}
+
+/*************** для touch screen **************************************************************/
+body.mouse 
+{
+	
+}
+
+	.arrow 
+	{
+		position:absolute;
+		top: 45%; 
+		width:0;
+		height:0;
+		border-top: 10px solid #efefef;
+		border-right: 10px solid transparent;	/***** прозрачность - transparent ******/
+		border-left: 10px solid transparent;
+	}
+
+.menu__arrow 
+{
+	
+}
