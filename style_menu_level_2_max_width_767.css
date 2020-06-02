@@ -16,10 +16,16 @@
 .sp_ul_menu div
 {
 	position: relative; /* Подменю позиционируются */
-    /*display: none;       Скрываем подменю */
+    display: none;      /* Скрываем подменю */
 	margin: 0 auto;
 	padding: 16px 0px 0px 0px;
 }
+
+.sp_ul_menu.open div 
+{
+	display: block;
+}
+
 
 .sp_li_menu a
 {
