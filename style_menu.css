@@ -81,7 +81,18 @@
 	transition:all 0.3s ease 0s;
 }
 
-
+.header_logo :hover 
+{
+	/* background-color: #99ffff; */
+	border: 2px solid #ccccd9; /* Параметры границы */
+	border-radius: 100%;
+	padding: 0px;
+	background: -webkit-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);  /*** Создаёт радиальный градиент в браузерах Safari и Chrome. ***/
+	background: -ms-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Internet Explorer. ***/
+	background: -moz-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Firefox. ***/
+	background: -o-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/	
+	transition:all 0.3s ease 0s;
+}
 
 .header_burger{display: none;} /* скрываем на всякий случай для всех разрешений которые свыше 767px */
 .header_menu{}
