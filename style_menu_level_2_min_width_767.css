@@ -34,7 +34,7 @@
 	transform: scaleY(0);  /* Скрываем подменю 3*/
 	transform: scaleX(0);  /* Скрываем подменю 3*/
 	text-align: center;
-	top: 110%; 
+	top: 70%; 
 	left:-50%;
 	opacity: 0; /*** прозрачность - максимальная при 0 и полностью не прозрасная при 1 ***/
 	transition-duration: 0.8s;	/*** скорость анимации ***/
