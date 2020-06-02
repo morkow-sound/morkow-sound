@@ -81,18 +81,7 @@
 	transition:all 0.3s ease 0s;
 }
 
-.header_logo :hover 
-{
-	/* background-color: #99ffff; */
-	border: 2px solid #ccccd9; /* Параметры границы */
-	border-radius: 100%;
-	padding: 0px;
-	background: -webkit-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);  /*** Создаёт радиальный градиент в браузерах Safari и Chrome. ***/
-	background: -ms-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Internet Explorer. ***/
-	background: -moz-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Firefox. ***/
-	background: -o-radial-gradient(center, circle farthest-side, #ffffff, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/	
-	transition:all 0.3s ease 0s;
-}
+
 
 .header_burger{display: none;} /* скрываем на всякий случай для всех разрешений которые свыше 767px */
 .header_menu{}
@@ -110,9 +99,14 @@
 	/* убираем точки */
 	list-style: none;
 	margin: 0px 0px 0px 0px; /*** отступ слева от элемента списка li ***/
-	padding: 12px 0px 12px 0px; /***** высота ссылки для hover ******/
+	
 }
 
+.sp_li_level_menu 
+{
+	position:relative;
+	padding: 12px 0px 12px 0px; /***** высота ссылки для hover - sub_menu ******/
+}
 
 .header_link
 {
@@ -140,8 +134,9 @@
 
 
 /*создаем медиа запрос - 767px размер iPad - всё что меньше будет прятаться в 'бургер'*/
-@media (max-width:768px)
+@media (max-width:767px)
 {
+	
 
 	body.lock
 	{
@@ -244,11 +239,11 @@
 	
 	
 	.header_link
-{
-	/*****высота ссылки для hover******/
-	padding: 0px 0px 0px 0px;
-	font-size: 18px; /*** размер текста в меню ***/
-}
+	{
+		/*****высота ссылки для hover******/
+		padding: 0px 0px 0px 0px;
+		font-size: 18px; /*** размер текста в меню ***/
+	}
 
 		.header_link:hover
 	{
@@ -281,5 +276,69 @@
 	.content 
 	{
 		padding: 25px 0px 0px 0px;
+	}
+}
+
+/*************** для touch screen **************************************************************/
+
+
+	body.mouse .arrow
+	{
+		display:none;
+	}
+
+
+	
+	.header_menu a.parent
+	{
+		margin:0px 20px 0px 0px;
+	}
+
+	.arrow 
+	{
+		position:absolute;
+		right: 0;
+		top: 45%;		
+		width:0;
+		height:0;
+		border-top: 10px solid #efefef;
+		border-right: 10px solid transparent;	/***** прозрачность - transparent ******/
+		border-left: 10px solid transparent;
+	}
+
+	.menu__arrow 
+	{
+		
+	}
+	
+	.arrow.active
+	{
+	transform: rotate(-180deg);
+	}
+	
+@media (max-width:767px)
+{
+	
+	.sp_li_level_menu 
+	{
+		position:none;
+		padding: 0px 0px 0px 0px; /***** высота ссылки для hover - sub_menu ******/
+	}
+	
+	.arrow 
+	{
+
+		top: 4%;		
+
+	}
+	
+	body.mouse .arrow
+	{
+		display:block;
+	}
+	
+	.header_menu a.parent
+	{
+		margin:0px 0px 0px 0px;
 	}
 }
