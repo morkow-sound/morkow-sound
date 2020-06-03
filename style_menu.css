@@ -143,7 +143,18 @@
 		background: -o-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/
 	}
 
-
+	.header_link.link_touch
+	{
+		text-decoration: underline;
+		color: #ffffff;		
+		transition-duration: 0.8s;
+		font-size: 14px;
+		background: -webkit-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);  /*** Создаёт радиальный градиент в браузерах Safari и Chrome. ***/
+		background: -ms-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);      /*** Создаёт радиальный градиент в браузере Internet Explorer. ***/
+		background: -moz-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);      /*** Создаёт радиальный градиент в браузере Firefox. ***/
+		background: -o-radial-gradient(center, circle farthest-side, #817ea0, #5b5979);      /*** Создаёт радиальный градиент в браузере Opera. ***/
+	}
+	
 /*создаем медиа запрос - 767px размер iPad - всё что меньше будет прятаться в 'бургер'*/
 @media (max-width:767px)
 {
@@ -261,6 +272,12 @@
 		font-size: 20px;
 		background: none; /* -webkit-radial-gradient(center, circle farthest-side, #bae6e7, #59c1c4) */
 	}
+	
+		.header_link.link_touch
+	{
+		font-size: 20px;
+		background: none; /* -webkit-radial-gradient(center, circle farthest-side, #bae6e7, #59c1c4) */
+	}
 
 }
 
@@ -302,14 +319,14 @@
 	
 body.touch	.header_menu a.parent
 	{
-		margin:0px 20px 0px 0px;
+		margin:0px 25px 0px 5px;
 	}
 
 	.arrow 
 	{
 		position:absolute;
 		right: 0;
-		top: 45%;		
+		top: 42%;		
 		width:0;
 		height:0;
 		border-top: 10px solid #efefef;
@@ -332,6 +349,19 @@ body.touch	.header_menu a.parent
 @media (max-width:767px)
 {
 	
+		.arrow 
+	{
+		top: 45%;		
+	}
+	
+	.arrow.active
+	{
+	transform: rotate(-180deg);
+	border-top: 10px solid #5b5979;
+	transition:all 0.3s ease 0s;
+	}
+	
+	
 	.sp_li_level_menu 
 	{
 		position:none;
@@ -352,6 +382,11 @@ body.touch	.header_menu a.parent
 	}
 	
 	.header_menu a.parent
+	{
+		margin:0px 0px 0px 0px;
+	}
+	
+	body.touch	.header_menu a.parent
 	{
 		margin:0px 0px 0px 0px;
 	}
