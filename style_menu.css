@@ -273,7 +273,7 @@
 		background: none; /* -webkit-radial-gradient(center, circle farthest-side, #bae6e7, #59c1c4) */
 	}
 	
-		.header_link.link_touch
+		.header_link.link_touch, .header_link.link_touch
 	{
 		font-size: 20px;
 		background: none; /* -webkit-radial-gradient(center, circle farthest-side, #bae6e7, #59c1c4) */
