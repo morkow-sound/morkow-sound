@@ -21,11 +21,15 @@
 	padding: 16px 0px 0px 0px;
 }
 
-.sp_ul_menu.open div 
+body.touch .sp_ul_menu.open  div
 {
 	display: block;
 }
 
+body.mouse .sp_ul_menu.open_mouse  div
+{
+	display: block;
+}
 
 .sp_li_menu a
 {
@@ -53,3 +57,4 @@
    .brd_top {
     border-top: 1px solid #ccc; /* Линия снизу */
 }
+
