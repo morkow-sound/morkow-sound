@@ -19,8 +19,26 @@ if(isMobile.any()){
 		arrow[i].addEventListener('click', function(){
 			subMenu.classList.toggle('open');
 			thisArrow.classList.toggle('active');
+			thisLink.classList.toggle('link_touch');
 		});
 	}
 }else{
 	body.classList.add('mouse');
+	
+	
+	let arrow=document.querySelectorAll('.arrow');
+	for(i=0; i<arrow.length; i++){
+			let thisLink=arrow[i].previousElementSibling;
+			let subMenu=arrow[i].nextElementSibling;  /*  указываем имя объекта сразу после  <span class="menu__arrow arrow"></span> */
+			let thisArrow=arrow[i];
+
+			thisLink.classList.add('parent');
+		arrow[i].addEventListener('click', function(){
+			subMenu.classList.toggle('open_mouse');
+			thisArrow.classList.toggle('active');
+			thisLink.classList.toggle('link_mouse');
+		});
+	}
+	
+	
 }
