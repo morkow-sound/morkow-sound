@@ -65,7 +65,7 @@ body.touch .sp_ul_menu.open div
 				transform: scaleX(1);
 		} 
 
-.sp_ul_menu_end div 
+body.mouse .sp_ul_menu_end div 
 {
 	left:-30%;
 }
