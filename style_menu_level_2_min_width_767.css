@@ -24,6 +24,8 @@
 .sp_li_menu 
 {
 	width:120%; /* Ширина меню */
+	max-width:120px;
+	min-width:120px;
 }
 
 body.mouse .sp_ul_menu div
@@ -35,7 +37,7 @@ body.mouse .sp_ul_menu div
 	transform: scaleX(0);  /* Скрываем подменю 3*/
 	text-align: center;
 	top: 110%; 
-	left:-50%;
+	/*left:-50%;*/
 	opacity: 0; /*** прозрачность - максимальная при 0 и полностью не прозрасная при 1 ***/
 	transition-duration: 0.8s;	/*** скорость анимации ***/
 }
@@ -49,7 +51,7 @@ body.touch .sp_ul_menu div
 	transform: scaleX(0);  /* Скрываем подменю 3*/
 	text-align: center;
 	top: 110%; 
-	left:-50%;
+	/*left:-50%;*/
 	opacity: 0; /*** прозрачность - максимальная при 0 и полностью не прозрасная при 1 ***/
 	transition-duration: 0.8s;	/*** скорость анимации ***/
 }
@@ -65,7 +67,7 @@ body.touch .sp_ul_menu.open div
 
 .sp_ul_menu_end div 
 {
-	left:-80%;
+	left:-30%;
 }
 
 .sp_li_menu a
