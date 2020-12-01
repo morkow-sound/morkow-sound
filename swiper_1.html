@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!-- адаптация по размеру экрана -->
+  <meta name= "viewport" content= "width=device-width"> <!-- адаптация для всей страницы под девайсы -->
+  
+  <title>Morkow Sound Studio</title>
+  
+  <link href="style.css" rel="stylesheet" type="text/css" /> <!-- основной стиль всей страницы -->
+  <link href="style_menu.css" rel="stylesheet" type="text/css" /> <!-- основной стиль меню -->
+  
+  <!-- подключение разных CSS в зависимости от ширины экрана устройства для под-меню -->
+  
+  <link rel="stylesheet" media="(max-width: 767px)" href="style_menu_level_2_max_width_767.css" /> <!-- основной стиль под меню реакция на размер экрана -->
+  <link rel="stylesheet" media="(min-width: 768px)" href="style_menu_level_2_min_width_767.css" /> <!-- основной стиль под меню реакция на размер экрана -->
+ 
+  <link rel="shortcut icon" href="images/icon.ico"> <!-- логотип маленький во вкладке -->
+  
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">  <!-- подключение стилей Swiper -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">  <!-- подключение стилей Swiper.mini -->
+
+     <link rel="stylesheet" href="swiper_1.css"/>  <!-- подключение стилей Swiper_1 -->
+
+ 
+  <script src="jquery-3.5.0/jquery-3.5.0.js"></script> <!-- подключение библиотеки jquery-3.5.0 -->
+  <script src="jquery-3.5.0/script2.js"></script>      <!-- подключение js скрипта для pop up сообщений -->
+  <script src="jquery-3.5.0/script_menu.js"></script>  <!-- подключение js скрипта menu -->
+    
+     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>  <!-- подключение Swiper скрипта -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  <!-- подключение Swiper скрипта mini -->
+ 
+ 
+	
+ </head>
+
+ <body>
+ 
+ <style type="text/css">
+    body
+    {
+        background:none transparent;
+    }
+</style>
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------  -->
+
+<div class="wrapper__swiper"> 
+
+<!-- Slider main container -->
+<div class="swiper-container image-slider block__row__body">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper image-slider__wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide image-slider__slider">
+		  <div class="image-slider__image ">
+		   <img src="images/Photo/IMG_20171215_223405.jpg" alt="Картинка" class="image-slider__image__img">
+		  </div>
+		</div>
+        <div class="swiper-slide image-slider__slider">
+		  <div class="image-slider__image ">
+		   <img src="images/Photo/IMG_20180709_005906.jpg" alt="Картинка" class="image-slider__image__img">
+		  </div>
+		</div>
+        <div class="swiper-slide image-slider__slider">
+		  <div class="image-slider__image ">
+		   <img src="images/Photo/IMG_20180822_142604.jpg" alt="Картинка" class="image-slider__image__img">
+		  </div>
+		</div>
+		<div class="swiper-slide image-slider__slider">
+		  <div class="image-slider__image ">
+		   <img src="images/Photo/IMG_20180822_221633_HDR.jpg" alt="Картинка" class="image-slider__image__img">
+		  </div>
+		</div>
+    </div>
+	
+	<!-- Добавляем если нужны стрелки управления -->
+    <div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+	
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+ </div>
+</div>                   
+
+
+<!-- ------------------------------------------------------------------------------------------------------  -->
+
+  <script src="jquery-3.5.0/script_swiper.js"></script>  <!-- подключение js скрипта Swiper -->
+ 
+ 
+ </body>
+</html>

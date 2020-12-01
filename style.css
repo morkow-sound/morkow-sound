@@ -1,8 +1,10 @@
 body
 {
 	background-image: url(images/background.jpg);
-	background-size: cover;
-	background-position: center top;
+	background-size: cover; /* auto cover contain */
+	background-position: center top; 
+	background-repeat: no-repeat; /* no-repeat | repeat | repeat-x | repeat-y | inherit | space | round */
+	background-attachment: fixed; /* background-attachment: fixed | scroll | local[, fixed | scroll | local]* */
 	text-align: center;
 	color: #cfdbdc;
 }
@@ -75,8 +77,10 @@ body
 	
 	.block__item__body /*** свойства для контета вложенного в элементы flex ***/
 	{
+		/*
 		background-color: #6cd2d2;
 		padding: 10px;
+		*/
 		font-size: 20px;
 		color: #fff;
 		font-weight: 700; /*** Устанавливает насыщенность шрифта. Значение устанавливается от 100 до 900 с шагом 100. Сверхсветлое начертание, которое может отобразить браузер, имеет значение 100, а сверхжирное — 900. Нормальное начертание шрифта (которое установлено по умолчанию) эквивалентно 400, стандартный полужирный текст — значению 700. ***/
@@ -277,6 +281,10 @@ body
   }
 } 
 /*********************************************** Простая анимация пульсирующей кнопки на чистом CSS ****************************/
+
+
+
+
 
 
 

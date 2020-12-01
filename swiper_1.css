@@ -1,0 +1,100 @@
+/*********************************************** Стили для swiper **************************************************************/
+
+
+.wrapper__swiper {
+
+}
+
+.image-slider {
+    /* для МУЛЬТИРЯДНОСТИ выставляем высоту !!!  height: 700px;*/
+    /*
+    height: 700px;
+	*/
+	min-height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 50px 0px;
+}
+
+.image-slider__wrapper {
+	
+}
+
+.image-slider__slider {
+
+}
+
+.image-slider__image {
+	text-align: center;
+	padding: 10% 5%;
+}
+
+.image-slider__image img {
+	max-width: 100%;
+}
+
+.image-slider__image__img {
+	opacity: 1; /* прозрачность фона или картинки от 0.0 до 1.0 */
+}
+
+/* стрелки */
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after {
+	color: #bfd0d0;
+	font-size: 80px;
+}
+
+/*Пагинция*/
+.swiper-pagination {
+	/*
+	padding: 2% 0%;
+	*/
+}
+
+.image-slider .swiper-pagination {
+	bottom: 0;
+}
+
+/* буллеты */
+.image-slider .swiper-pagination-bullet {
+	width: 20px;
+	height: 20px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background-color: #bfd0d0;
+}
+
+/* Фракция */
+.image-slider .swiper-pagination-fraction {
+	font-size: 20px;
+	color: #fff;
+}
+
+/* Прогрессбар */
+.image-slider .swiper-pagination-progressbar-fill {
+	background-color: #bfd0d0;
+	padding: 5px;
+}
+
+/* Скроллбар */
+.image-slider .swiper-scrollbar-drag {
+	cursor: pointer;
+	background-color: #bfd0d0;
+	padding: 5px;
+}
+
+/* автоширина слайдера для slidesPerView autoHeight */
+.image-slider .swiper-slide {
+	width: auto;
+}
+
+/* Мультирядность ОБЯЗАТЕЛЬНО !!! нужно убрать  автоширина слайдера для slidesPerView autoHeight  ЗАКОМЕНТИРОВАТЬ width: auto; ТАК ЖЕ В .image-slider для МУЛЬТИРЯДНОСТИ выставляем высоту !!!  height: 700px; */
+/*
+.image-slider .swiper-slide {
+	height: calc((100% - 30px) / 2);
+	overflow: hidden;
+}
+*/
+
+
+/*********************************************** Стили для swiper **************************************************************/
