@@ -350,7 +350,7 @@
 <div class="wrapper__swiper"> 
 
 <!-- Slider main container -->
-<div class="swiper-container image-slider block__row__body">
+<div class="swiper-container image-slider block__row__body screen_width">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper image-slider__wrapper">
         <!-- Slides -->
@@ -394,10 +394,10 @@
 
 
 <!-- ------------------------------------------------------------------------------------------------------  -->
-
-<div class="wrapper"> <!-- FLEXBOX -->
-	<div class="block">
-		<div class="block__row__body">
+<!-- <div class= "screen_width" > -->
+<div class="wrapper wrapper__fullscreen_iframe "> <!-- FLEXBOX -->
+	<div class="block ">
+		<div class="block__row__body screen_width">
 			<div class="block__column block__column_fullscreen_iframe">
 				<div class="block__item block__item_fullscreen_iframe">
 					<div class="fullscreen_iframe">
@@ -408,15 +408,16 @@
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  
 						sandbox= "allow-same-origin allow-scripts" ></iframe>
 						
-						<!-- allow-forms  allow-modals allow-popups allow-popups-to-escape-sandbox allow-presentation allow-top-navigation  -->
+						<!-- allow-forms  allow-modals allow-popups allow-popups-to-escape-sandbox allow-presentation allow-top-navigation  |  seamless -->
 						
 						<!-- </div> -->
 					</div>
 				</div>
 			</div>
 		</div>
-    </div>
+	</div>
 </div>
+
 	
 <div class="wrapper__body"> <!-- FLEXBOX -->
 	<div class="block__body">	
@@ -440,6 +441,53 @@
 			<a href= "https://yandex.ru/" >яндекс</a> <a href= "https://www.google.com/" >google</a> 
 		</nav>
 	</div>
+	
+	
+	
+<!-- ------------------------------------------------------------------------------------------------------  -->	
+	
+	
+<div class="items">
+        <label><input type="radio" name="v" checked>Блоки-карточки</label>
+        <input type="radio" name="v" id="list_of_cats"><label for="list_of_cats">Список</label>
+    <article>
+        <section class="block">
+            <img src="http://placekitten.com/100" alt="товар">
+            <a class="name" href="#">Шарф вязаный (шерсть)</a> <br>
+            <p class="short_info">цена: 1000 руб<br>
+                Цвет: тёмно-синий<br>
+                Статус: в наличии
+            </p>
+        </section>
+        <section class="block">
+            <img src="http://placekitten.com/100" alt="товар">
+            <a class="name" href="#">Шарф вязаный (шерсть)</a> <br>
+            <p class="short_info">цена: 1000 руб<br>
+                Цвет: тёмно-синий<br>
+                Статус: в наличии
+            </p>
+        </section>
+        <section class="block">
+            <img src="http://placekitten.com/100" alt="товар">
+            <a class="name" href="#">Шарф вязаный (шерсть)</a> <br>
+            <p class="short_info">цена: 1000 руб<br>
+                Цвет: тёмно-синий<br>
+                Статус: в наличии
+            </p>
+        </section>
+   </article>
+      </div>	
+	
+	
+	
+<!-- ------------------------------------------------------------------------------------------------------  -->	
+	
+	
+	
+	
+	
+	
+	
 </div>
 				<div>
 						<?php
@@ -482,7 +530,7 @@
 						?>
 				</div>
  </div>
- 
+
   <script src="jquery-3.5.0/script-menu_touch_screen.js"></script>  <!-- подключение js скрипта menu_touch screen -->
   <script src="jquery-3.5.0/script_swiper.js"></script>  <!-- подключение js скрипта Swiper -->
   
