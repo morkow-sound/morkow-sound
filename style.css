@@ -6,6 +6,8 @@ body
 	background-repeat: no-repeat; /* no-repeat | repeat | repeat-x | repeat-y | inherit | space | round */
 	background-attachment: fixed; /* background-attachment: fixed | scroll | local[, fixed | scroll | local]* */
 	text-align: center;
+	width:100%;
+	height:100vh;
 	color: #cfdbdc;
 }
 

@@ -71,7 +71,7 @@
 						{
 							.fullscreen_iframe 
 							{
-								padding-bottom: 80.5%;
+								padding-bottom: 79.5%;
 							}				
 						}
 
@@ -124,6 +124,7 @@
 	*/
 	min-height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(8px) saturate(100%) contrast(100%); /* размытие фона + насыщенность + контрастность*/
 	padding: 1% 0px;
 }
 
@@ -151,8 +152,11 @@
 }
 
 .image-slider__image__img {
-	/*opacity: 1; /* прозрачность фона или картинки от 0.0 до 1.0 */
-	
+	/*
+	opacity: 1; /* прозрачность фона или картинки от 0.0 до 1.0
+	padding: 0% 0% 2%;
+	margin: 0% 0% 2%;
+	 */
 }
 
 /* стрелки */
@@ -164,9 +168,9 @@
 
 /*Пагинция*/
 .swiper-pagination {
-	/*
-	padding: 2% 0%;
-	*/
+	
+	padding: 2% 0% 0%; /* Первое значение задает поле от верхнего края, второе — одновременно от левого и правого края, а третье — от нижнего края. */
+	
 }
 
 .image-slider .swiper-pagination {
@@ -175,8 +179,9 @@
 
 /* буллеты */
 .image-slider .swiper-pagination-bullet {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
 	font-size: 14px;
 	color: #fff;
 	text-align: center;
@@ -217,3 +222,25 @@
 
 
 /*********************************************** Стили для swiper **************************************************************/
+
+.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+	  /*
+      background: #fff;
+	  */
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }

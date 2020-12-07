@@ -18,24 +18,24 @@
 			return '<span class="' + className + '">' + (index + 1) + '</span>';
 		},
 		//фракция показывает кол-во изображений всего и номер показываемого
-		type: 'fraction',
+		//type: 'fraction',
 		//кастомный вывод фракции
-		renderFraction: function (currentClass, totalClass) {
-			return 'Фото <span class="' + currentClass + '"></span>' +
-			' из ' +
-			'<span class="' + totalClass + '"></span>';
-		},
+		//renderFraction: function (currentClass, totalClass) {
+			//return 'Фото <span class="' + currentClass + '"></span>' +
+			//' из ' +
+			//'<span class="' + totalClass + '"></span>';
+		//},
 		//Прогрессбар
-		type: 'progressbar'
+		//type: 'progressbar'
 	},
 	
 	
 	//Скроллбар
-	scrollbar: {
-		el: '.swiper-scrollbar',
+	//scrollbar: {
+		//el: '.swiper-scrollbar',
 		//Возможность перетаскивать скроолбар
-		draggable: true
-	},
+		//draggable: true
+	//},
 	//Управление через стрелки клавиатуры
 	keyboard: {
 		enabled: true, //включение функции управления с клавиатуры
@@ -161,6 +161,32 @@ breakpoints: {
 		slidesPerView: 3,
 		loopedSlides: 3,
 	}
+},
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Отключение предзагрузки картинок
+preloadImages: false,
+//Lazy loading пост-загрузка картинок
+lazy: {
+	// подгрузка картинок в момент старта просмотра или переключения картинок
+	loadOnTransitionStart: false,
+	// подгрузка следующих или предыдущих картинок
+	loadPrevNext: false,
+},
+//Слежка за видимыми слайдами - стоит включать когда slidesPerView - auto или больше 1
+watchSlidesProgress: true,
+//Добавление класса видимым слайдам - стоит включать когда slidesPerView - auto или больше 1
+watchSlidesVisibility: true,
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Зум Картинки
+zoom: {
+	//Максимальное увеличение
+	maxRatio: 5,
+	//Минимальное увеличение
+	minRatio: 1,
 },
 	
   });
