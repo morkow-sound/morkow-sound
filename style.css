@@ -2,7 +2,7 @@ body
 {
 	background-image: url(images/background.jpg);
 	background-size: cover; /* auto cover contain */
-	background-position: center top; 
+	background-position: center /*top*/; 
 	background-repeat: no-repeat; /* no-repeat | repeat | repeat-x | repeat-y | inherit | space | round */
 	background-attachment: fixed; /* background-attachment: fixed | scroll | local[, fixed | scroll | local]* */
 	text-align: center;
